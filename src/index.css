@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+
+/*Scrollbar customized*/
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  overflow: overlay;
+  width: 5px;
+  z-index: 100;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 3px;
+  z-index: 100;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 15px;
+  background-color: #f4f4f4;
+  border-radius: 100px;
+  overflow: overlay;
+  z-index: 150;
+}
+
+/**/
+.pc{
+  visibility: visible;
+  display: flex;
+}
+
+.mob{
+  visibility: hidden;
+  display: none;
+}
+
+.toppp{
+  z-index: 9999;
+}
+
+.hide{
+  display: none;
+  visibility: hidden;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .mob{
+    visibility: visible;
+    display:flex;
+  }
+  .pc{
+    visibility: hidden;
+    display: none;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #000000;
+  font-family: Syne;
+  margin: 0;
+  padding: 0;
+}
+
+.grad{
+  background: linear-gradient(90deg, #696eff, #f8acff ) var(--x, 0)/ 120%;;
+  opacity: 1;
+  transition-duration: 0.3s;
+  
+}
+
+.grad:hover { 
+  --x: 100%; 
+  filter: hue-rotate(-300deg);
+}
+
+
+.gradtxt{
+  background: linear-gradient(90deg, #696eff, #f8acff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradtxt:hover{
+  filter: hue-rotate(-300deg);
+  transition-duration: 0.3s;
+}
+
+.shad{
+  box-shadow: 0px 39px 113px rgba(0, 179, 255, 0.184);
+}
